@@ -18,4 +18,8 @@ db.connect((error)=>{
         console.log("Mysql Connected")
     }
 })
+router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/index.html'));
+    
+  });
 app.listen(host, () => console.log(`Listening on Port ${host}`))
